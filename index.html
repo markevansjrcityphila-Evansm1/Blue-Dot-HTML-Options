@@ -5,64 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blue Dot and HTML Options</title>
   <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      background: #b9babb;
-      color: #333;
-    }
-    header {
-      background: #516280;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .card {
-      background: rgb(233, 234, 235);
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: 0.2s ease;
-      outline: auto;
-      outline-color: #516280;
-    }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-    .emoji {
-      font-size: 2rem;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    h1 {
-        margin-top: 0.5rem;
-        color: white;
-        font-size: 42;
-    }
-    h2 {
-      margin-top: 0.5rem;
-    }
-    p {
-      font-size: 0.95rem;
-      color: #686868;
-    }
-    h3 {
-        font-size: 0.99rem;
-        color: #f5f2f2
-    }
-  </style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background: #b9babb;
+    color: #333;
+  }
+
+  header {
+    background: #516280;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .card {
+    background: rgb(233, 234, 235);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.2s ease;
+    outline: auto;
+    outline-color: #516280;
+
+    /* Fix overlapping + consistent sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px; /* consistent card height */
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .emoji {
+    font-size: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block; /* ensures links wrap entire card */
+  }
+
+  h1 {
+    margin-top: 0.5rem;
+    color: white;
+    font-size: 42px;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #686868;
+  }
+
+  h3 {
+    font-size: 0.99rem;
+    color: #f5f2f2;
+  }
+</style>
 </head>
 <body>
   <header>
@@ -78,7 +95,7 @@
       </div>
     </a>
 
-    <a href="BlueDotOption2.html>
+    <a href="BlueDotOption2.html">
       <div class="card">
         <div class="emoji">2️⃣</div>
         <h2>Option 2</h2>
@@ -105,7 +122,7 @@
       <div class="card">
         <div class="emoji">5️⃣</div>
         <h2>Option 5</h2>
-        <p>stacking cards, each section on one card & wide width.</p>
+        <p>Stacking cards, each section on one card & wide width.</p>
       </div>
     </a>
      <a href="BlueDotOption6.html">
@@ -132,13 +149,18 @@
      <a href="BlueDotOption9.html">
       <div class="card">
         <div class="emoji">9️⃣</div>
-        <h2>Option 4 For Large Content</h2>
+        <h2>Option 9 (For Large Content)</h2>
         <p>This is a mockup of what we could do with a navigator on the left and content on the right.</p>
       </div>
     </a>
   </main>
 </body>
 </html>
+
+
+
+
+
 
 
 
