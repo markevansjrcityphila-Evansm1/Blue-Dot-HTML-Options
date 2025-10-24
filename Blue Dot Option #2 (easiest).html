@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permit Address Search Guide</title>
+  <link href="stylesheet.css" rel="stylesheet">
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e6f0fa; /* light blue background */
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 40px 0 20px 0;
+      background-color: #0078d4; /* header blue */
+      color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Logo */
+    .logo {
+      max-width: 600px; /* double the previous size */
+      height: auto;
+      display: block;
+      margin: 0 auto 15px auto;
+      background-color: white; /* light box behind logo */
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    /* Main content card */
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 35px;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #0078d4;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a {
+      color: #005a9e;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-left: 20px;
+      padding-left: 0;
+      font-size: 16px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    /* Button styles */
+    button {
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005a9e;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+
+    .example {
+      font-style: italic;
+      color: #555;
+      margin-left: 1rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #ccc;
+      margin: 2rem 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 200px;
+      }
+
+      main {
+        padding: 25px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        max-width: 150px;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/markevansjrcityphila-Evansm1/images/main/imagelilogo.png" alt="Logo" class="logo">
+  </header>
+
+  <main>
+    <h1>Address Search Guide</h1>
+
+    <p>When searching for the Address, keep the following tips in mind:</p>
+
+    <div class="note">
+      <ul>
+        <li>Try searching for a portion of the address:
+          <div class="example">Example: "1401 Arch" instead of "1401 Arch Street"</div>
+        </li>
+        <li>Include any street directions in your search:
+          <div class="example">Example: N, W, E, S</div>
+        </li>
+        <li>Verify the Address matches the Office of Property Assessment records:
+          <a href="https://www.phila.gov/opa/" target="_blank" rel="noopener">Visit OPA's website</a>
+        </li>
+        <li>Use the <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">eClipse Building ID Map</a> to find or confirm the correct Address, BIN, or Building Name before making a selection.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Search Options </h2>
+      <ul>
+        <li><strong>OPA Account Number:</strong> Must be nine digits, without dashes or spaces (e.g. 001222234).</li>
+        <li><strong>Building Identification Number (BIN):</strong> Found by clicking the building outline on the <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">Building ID Map</a>.</li>
+        <li><strong>Suites or Unit Numbers:</strong> Identify a unit descriptor such as a condominium number. An address must be included in the Address field above. Suite values are case sensitive.</li>
+        <li><strong>Building Name:</strong> Coming Soon! The Department is working to expand this search option. Some buildings may have names.</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="button-container">
+      <button onclick="self.close()">Close</button>
+    </div>
+  </main>
+</body>
+</html>
+

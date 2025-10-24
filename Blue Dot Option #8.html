@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Address Search Guide</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 40px 20px 20px 20px; /* reduced bottom padding */
+    background-color: #fdfdfd;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    color: #1e3a8a;
+    margin: 10px 0 0 0; /* add small top margin if needed */
+  }
+
+  .hero img.logo {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto; /* centers logo */
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 8px;
+  }
+
+  /* Divider below logo */
+  .hero-divider {
+    border: 1px solid #1e90ff;
+    width: 60%;
+    margin: 20px auto 0 auto; /* space above and below */
+  }
+
+  /* Accordion Styles */
+  .accordion-section {
+    max-width: 900px;
+    margin: 30px auto; /* reduced from 40px */
+    padding: 0 20px;
+  }
+
+  .accordion {
+    background-color: #eef6ff;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+  }
+
+  .accordion h2 {
+    margin: 0;
+    color: #1e3a8a;
+    font-size: 22px;
+  }
+
+  .accordion-content {
+    margin-top: 10px;
+  }
+
+  .accordion ul {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+
+  .accordion li {
+    margin-bottom: 15px; /* spacing between bullets */
+  }
+
+  .example {
+    font-style: italic;
+    color: #555;
+    margin-left: 1rem;
+  }
+
+  a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Close Button */
+  .button-container {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .close-btn {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .close-btn:hover {
+    background-color: #0066cc;
+    transform: translateY(-1px);
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 26px;
+    }
+
+    .accordion {
+      padding: 12px 15px;
+    }
+
+    .close-btn {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <!-- Logo centered -->
+  <img src="https://raw.githubusercontent.com/markevansjrcityphila-Evansm1/images/main/imagelilogo.png" alt="Logo" class="logo">
+  <!-- Divider below logo -->
+  <hr class="hero-divider">
+  <h1>Address Search Guide</h1>
+</section>
+
+<!-- Accordion Section -->
+<div class="accordion-section">
+  <!-- Tips Accordion -->
+  <div class="accordion">
+    <h2>Tips for Searching</h2>
+    <div class="accordion-content">
+      <ul>
+        <li>Try searching for a portion of the address:
+          <div class="example">Example: "1401 Arch" instead of "1401 Arch Street"</div>
+        </li>
+        <li>Include any street directions:
+          <div class="example">Example: N, W, E, S</div>
+        </li>
+        <li>Verify Address with OPA records:
+          <a href="https://www.phila.gov/opa/" target="_blank" rel="noopener">Visit OPA's website</a>
+        </li>
+        <li>Check BIN or Building Name on the
+          <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">eClipse Building ID Map</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Search Options Accordion -->
+  <div class="accordion">
+    <h2>Search Options</h2>
+    <div class="accordion-content">
+      <ul>
+        <li><strong>OPA Account Number:</strong> Must be nine digits, no dashes or spaces (e.g. 001222234).</li>
+        <li><strong>Building Identification Number (BIN):</strong> Found by clicking the building outline on the
+          <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">Building ID Map</a>.
+        </li>
+        <li><strong>Suites or Unit Numbers:</strong> Identify a unit descriptor. Must include the Address field. Suite values are case-sensitive.</li>
+        <li><strong>Building Name:</strong> Coming Soon! Some buildings may have names.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Close Button -->
+<div class="button-container">
+  <button class="close-btn" onclick="closePage()">Close</button>
+</div>
+
+<script>
+function closePage() {
+  if (window.close) {
+    window.close();
+  } else {
+    alert("You can close this tab manually.");
+  }
+}
+</script>
+
+</body>
+</html>

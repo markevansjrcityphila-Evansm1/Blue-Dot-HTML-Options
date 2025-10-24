@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Address Search Guide</title>
+<style>
+  /* Base body styling */
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Header area */
+  header {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #2c3e50;
+    color: #fff;
+  }
+
+  header img.logo {
+    max-width: 1000px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background-color: #ffffff;
+  }
+
+  /* Card container */
+  .card {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px 35px;
+    background-color: #ffffff;
+    border-left: 6px solid #1e90ff; /* blue highlight line */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    line-height: 1.6;
+  }
+
+  h2 {
+    color: #1e3a8a; /* darker blue for headings */
+    margin-top: 0;
+  }
+
+  a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
+
+  .example {
+    font-style: italic;
+    color: #555;
+    margin-left: 1rem;
+  }
+
+  /* Close button styling */
+  .button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .close-btn {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+
+  .close-btn:hover {
+    background-color: #0066cc;
+    transform: translateY(-1px);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .card {
+      padding: 20px;
+      margin: 20px;
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .close-btn {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="https://raw.githubusercontent.com/markevansjrcityphila-Evansm1/images/main/imagelilogo.png" alt="Logo" class="logo">
+  <h1>Address Search Guide</h1>
+</header>
+
+<div class="card">
+  <p>When searching for the Address, keep the following tips in mind:</p>
+  <ul>
+    <li>Try searching for a portion of the address:
+      <div class="example">Example: "1401 Arch" instead of "1401 Arch Street"</div>
+    </li>
+    <li>Include any street directions in your search:
+      <div class="example">Example: N, W, E, S</div>
+    </li>
+    <li>Verify the Address matches the Office of Property Assessment records:
+      <a href="https://www.phila.gov/opa/" target="_blank" rel="noopener">Visit OPA's website</a>
+    </li>
+    <li>Use the <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">eClipse Building ID Map</a> to find or confirm the correct Address, BIN, or Building Name before making a selection.</li>
+  </ul>
+
+  <h2>Search Options</h2>
+  <ul>
+    <li><strong>OPA Account Number:</strong> Must be nine digits, without dashes or spaces (e.g. 001222234).</li>
+    <li><strong>Building Identification Number (BIN):</strong> Found by clicking the building outline on the <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">Building ID Map</a>.</li>
+    <li><strong>Suites or Unit Numbers:</strong> Identify a unit descriptor such as a condominium number. An address must be included in the Address field above. Suite values are case sensitive.</li>
+    <li><strong>Building Name:</strong> Coming Soon! The Department is working to expand this search option. Some buildings may have names.</li>
+  </ul>
+
+  <div class="button-container">
+    <button class="close-btn" onclick="closePage()">Close</button>
+  </div>
+</div>
+
+<script>
+function closePage() {
+  if (window.close) {
+    window.close();
+  } else {
+    alert("You can close this tab manually.");
+  }
+}
+</script>
+
+</body>
+</html>

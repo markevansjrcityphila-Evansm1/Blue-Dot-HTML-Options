@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Address Search Guide</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+  }
+
+  /* Sidebar Navigation */
+  .sidebar {
+    width: 220px;
+    background-color: #eef6ff;
+    border-right: 2px solid #1e90ff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .sidebar h2 {
+    color: #1e3a8a;
+    margin-top: 0;
+  }
+
+  .sidebar a {
+    display: block;
+    margin: 10px 0;
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  /* Main Content */
+  .main-content {
+    max-width: 900px;
+    margin: 40px auto; 
+    padding: 20px;
+  }
+
+  .main-content h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    padding-top: 80px; 
+    margin-top: -80px; 
+  }
+
+  .hero-divider {
+    border: none;
+    border-top: 2px solid #1e90ff;
+    width: 50%;
+    margin: 20px auto 30px auto;
+  }
+
+  section {
+    margin-bottom: 40px;
+    background-color: #eef6ff;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  section h2 {
+    color: #1e3a8a;
+    margin-top: 0;
+  }
+
+  section ul {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+
+  section li {
+    margin-bottom: 15px;
+  }
+
+  .example {
+    font-style: italic;
+    color: #555;
+    margin-left: 1rem;
+  }
+
+  a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Fixed Close Button */
+  .close-btn {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .close-btn:hover {
+    background-color: #0066cc;
+    transform: translateY(-1px);
+  }
+
+  /* Logo */
+  .logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 8px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 2px solid #1e90ff;
+    }
+
+    .main-content {
+      margin-left: 0;
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<nav class="sidebar">
+  <img src="https://raw.githubusercontent.com/markevansjrcityphila-Evansm1/images/main/imagelilogo.png" alt="Logo" class="logo">
+  <h2>Navigation</h2>
+  <a data-target="h1-0">Address Search Guide</a>
+  <a data-target="h1-1">Section One</a>
+  <a data-target="h1-2">Section Two</a>
+  <a data-target="h1-3">Section Three</a>
+  <a data-target="h1-4">Section Four</a>
+  <a data-target="h1-5">Section Five</a>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+
+  <!-- Original Search Guide Content -->
+  <h1 id="h1-0">Address Search Guide</h1>
+  <hr class="hero-divider">
+
+  <section>
+    <h2>Tips for Searching</h2>
+    <ul>
+      <li>Try searching for a portion of the address:
+        <div class="example">Example: "1401 Arch" instead of "1401 Arch Street"</div>
+      </li>
+      <li>Include any street directions:
+        <div class="example">Example: N, W, E, S</div>
+      </li>
+      <li>Verify Address with OPA records:
+        <a href="https://www.phila.gov/opa/" target="_blank" rel="noopener">Visit OPA's website</a>
+      </li>
+      <li>Check BIN or Building Name on the
+        <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">eClipse Building ID Map</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Search Options</h2>
+    <ul>
+      <li><strong>OPA Account Number:</strong> Must be nine digits, no dashes or spaces (e.g. 001222234).</li>
+      <li><strong>Building Identification Number (BIN):</strong> Found by clicking the building outline on the
+        <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" rel="noopener">Building ID Map</a>.
+      </li>
+      <li><strong>Suites or Unit Numbers:</strong> Identify a unit descriptor. Must include the Address field. Suite values are case-sensitive.</li>
+      <li><strong>Building Name:</strong> Coming Soon! Some buildings may have names.</li>
+    </ul>
+  </section>
+
+  <!-- Placeholder H1s with sample sections -->
+  <h1 id="h1-1">Section One</h1>
+  <hr class="hero-divider">
+  <section>
+    <h2>First Section Content</h2>
+    <p>Placeholder text for section one, first block.</p>
+  </section>
+  <section>
+    <h2>Second Section Content</h2>
+    <p>Placeholder text for section one, second block.</p>
+  </section>
+
+  <h1 id="h1-2">Section Two</h1>
+  <hr class="hero-divider">
+  <section>
+    <h2>First Section Content</h2>
+    <p>Placeholder text for section two, first block.</p>
+  </section>
+  <section>
+    <h2>Second Section Content</h2>
+    <p>Placeholder text for section two, second block.</p>
+  </section>
+
+  <h1 id="h1-3">Section Three</h1>
+  <hr class="hero-divider">
+  <section>
+    <h2>First Section Content</h2>
+    <p>Placeholder text for section three, first block.</p>
+  </section>
+  <section>
+    <h2>Second Section Content</h2>
+    <p>Placeholder text for section three, second block.</p>
+  </section>
+
+  <h1 id="h1-4">Section Four</h1>
+  <hr class="hero-divider">
+  <section>
+    <h2>First Section Content</h2>
+    <p>Placeholder text for section four, first block.</p>
+  </section>
+  <section>
+    <h2>Second Section Content</h2>
+    <p>Placeholder text for section four, second block.</p>
+  </section>
+
+  <h1 id="h1-5">Section Five</h1>
+  <hr class="hero-divider">
+  <section>
+    <h2>First Section Content</h2>
+    <p>Placeholder text for section five, first block.</p>
+  </section>
+  <section>
+    <h2>Second Section Content</h2>
+    <p>Placeholder text for section five, second block.</p>
+  </section>
+
+</div>
+
+<!-- Fixed Close Button -->
+<button class="close-btn" onclick="closePage()">Close</button>
+
+<script>
+function closePage() {
+  if (window.close) {
+    window.close();
+  } else {
+    alert("You can close this tab manually.");
+  }
+}
+
+// Smooth scroll without changing URL
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('data-target');
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
