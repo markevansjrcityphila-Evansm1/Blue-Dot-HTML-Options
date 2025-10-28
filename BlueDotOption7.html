@@ -5,98 +5,115 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Address Search Guide</title>
 <style>
+  /* ---------- GLOBAL FONT CONTROL ---------- */
+  :root {
+    --base-font-size: 1.1rem; /* 👈 Change this ONE value to scale all text */
+  }
+
+  /* ---------- BASE STYLES ---------- */
   body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #fdfdfd;
     color: #333;
+    font-size: var(--base-font-size);
   }
 
   header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 1.8rem 1.2rem;
   }
 
   header img.logo {
-    max-width: 800px;
-    margin-bottom: 15px;
+    max-width: 50rem;
+    margin-bottom: 1rem;
     background-color: white;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
-.header-divider {
-  border: none;
-  border-top: 2px solid #1e90ff; /* matches your link/blue theme */
-  margin: 15px auto 0 auto;      /* space above and below */
-  width: 800px;               /* optional, controls length */
-}
+
+  .header-divider {
+    border: none;
+    border-top: 0.125rem solid #1e90ff;
+    margin: 1.2rem auto 0 auto;
+    width: 50rem;
+  }
+
   h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: calc(var(--base-font-size) * 2);
     color: #1e3a8a;
   }
 
+  /* ---------- ACCORDION ---------- */
   .accordion {
-    max-width: 800px;
-    margin: 30px auto;
-    border-radius: 10px;
+    max-width: 62.5rem;
+    margin: 2.2rem auto;
+    border-radius: 0.6rem;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
   }
 
   .accordion-item {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 0.0625rem solid #ccc;
   }
 
   .accordion-header {
     background-color: #e0f0ff;
-    padding: 18px 20px;
+    padding: 1.1rem 1.2rem;
     font-weight: bold;
     color: #1e3a8a;
+    font-size: calc(var(--base-font-size) * 1.2);
   }
 
   .accordion-content {
-    padding: 15px 20px;
+    padding: 1rem 1.2rem;
     background-color: #f9f9f9;
-    display: block; /* always visible */
+    display: block;
+    font-size: calc(var(--base-font-size) * 1.1);
   }
 
   .accordion-content ul {
-    padding-left: 20px;
+    padding-left: 1.3rem;
   }
 
   .accordion-content li {
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    line-height: 1.6;
   }
 
   .example {
     font-style: italic;
     color: #555;
     margin-left: 1rem;
+    font-size: calc(var(--base-font-size) * 0.9);
   }
 
+  /* ---------- LINKS ---------- */
   a {
     color: #1e90ff;
     text-decoration: none;
     font-weight: 600;
+    font-size: calc(var(--base-font-size) * 1.1);
   }
 
   a:hover {
     text-decoration: underline;
   }
 
+  /* ---------- BUTTON ---------- */
   .button-container {
     text-align: center;
-    margin: 40px 0;
+    margin: 2.5rem 0;
   }
 
   .close-btn {
     background-color: #1e90ff;
     color: white;
     border: none;
-    padding: 12px 30px;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.5rem;
+    font-size: calc(var(--base-font-size) * 1.1);
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
   }
@@ -106,13 +123,14 @@
     transform: translateY(-1px);
   }
 
+  /* ---------- RESPONSIVE ---------- */
   @media (max-width: 480px) {
     header img.logo {
-      max-width: 150px;
+      max-width: 11rem;
     }
 
     h1 {
-      font-size: 22px;
+      font-size: calc(var(--base-font-size) * 1.5);
     }
   }
 </style>
@@ -177,4 +195,6 @@ function closePage() {
 
 </body>
 </html>
+
+
 
