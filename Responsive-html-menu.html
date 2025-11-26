@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Address Search Guide</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+
+  .menu-slide {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+</style>
+</head>
+
+<body class="neutral-300 text-slate-800 font-sans">
+
+
+<nav class="bg-sky-700 text-white px-4 sm:px-6 py-3 relative flex justify-end items-center">
+
+  <button id="menu-btn" class="sm:hidden flex items-center focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+  <div class="hidden sm:flex sm:items-center sm:ml-4 text-xl">
+    <button id="desktop-menu-btn" class="font-semibold hover:underline transition-transform duration-150 transform hover:scale-110">
+      Menu
+    </button>
+  </div>
+</nav>
+
+<div id="side-menu" class="fixed top-0 right-0 h-full w-64 bg-gradient-to-r from-neutral-50 to-neutral-200 shadow-2xl border-l border-gray-300 menu-slide
+                         transform translate-x-full opacity-0 z-50 flex flex-col">
+
+<button id="close-menu" class="self-end mt-4 mr-4 text-gray-700 font-bold text-3xl hover:scale-125 transform transition-transform">
+  &times;
+</button>
+
+
+  <nav class="mt-10 flex flex-col space-y-4 px-6 text-lg">
+    <a href="https://www.phila.gov/li" target="_blank" class="text-black font-semibold hover:text-blue-700 transform transition-transform duration-200 hover:scale-105 hover:bg-slate-100">L&I Website</a>
+    <a href="https://example.com/other1" target="_blank" class="text-black font-semibold hover:text-blue-700 transform transition-transform duration-200 hover:scale-105 hover:bg-slate-100">Other Link 1</a>
+    <a href="https://example.com/other2" target="_blank" class="text-black font-semibold hover:text-blue-700 transform transition-transform duration-200 hover:scale-105 hover:bg-slate-100">Other Link 2</a>
+  </nav>
+</div>
+
+
+<header class="text-center py-10 px-4">
+  <img 
+    src="https://raw.githubusercontent.com/markevansjrcityphila-Evansm1/images/main/imagelilogo.png" 
+    alt="Logo"
+    class="mx-auto mb-4 max-w-[clamp(20rem,40vw,28rem)] rounded-md"
+  >
+
+  <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-blue-900" style="text-wrap: balance;">
+    Address Search Guide
+  </h1>
+
+  <hr class="border-t-4 border-blue-500 mt-6 mx-auto w-[clamp(10rem,90%,50rem)]">
+</header>
+
+
+<div class="accordion w-[clamp(80%,600px,80%)] mx-auto px-10 sm:px-6 rounded-xl neutral-300">
+
+  <div class="w-full border-b border-slate-200 shadow-lg mt-2">
+    <div class="w-full bg-blue-100 px-4 sm:px-6 py-4 font-semibold text-blue-900 text-[clamp(1.1rem,2.5vw,1.6rem)]">
+      Tips for Searching
+    </div>
+
+    <div class="w-full px-4 sm:px-6 py-5 bg-slate-50 space-y-4 text-[clamp(1rem,2vw,1.3rem)] leading-relaxed">
+      <ul class="list-disc pl-5 space-y-4">
+        <li>
+          Try searching for a portion of the address:
+          <div class="italic text-slate-600 pl-3 text-[clamp(0.9rem,1.8vw,1.15rem)]">
+            Example: "1401 Arch" instead of "1401 Arch Street"
+          </div>
+        </li>
+        <li>
+          Include any street directions:
+          <div class="italic text-slate-600 pl-3 text-[clamp(0.9rem,1.8vw,1.15rem)]">
+            Example: N, W, E, S
+          </div>
+        </li>
+        <li>
+          Verify Address with OPA records:
+          <a href="https://www.phila.gov/opa/" target="_blank" class="inline-block text-blue-600 underline font-semibold hover:text-blue-800 transform transition-transform duration-200 hover:scale-105">Visit OPA's website</a>
+        </li>
+        <li>
+          Check BIN or Building Name on the 
+          <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" class="inline-block text-blue-600 underline font-semibold hover:text-blue-800 transform transition-transform duration-200 hover:scale-105">eClipse Building ID Map</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="w-full border-b border-slate-200 shadow-lg mt-2">
+    <div class="w-full bg-blue-100 px-4 sm:px-6 py-4 font-semibold text-blue-900 text-[clamp(1.1rem,2.5vw,1.6rem)]">
+      Search Options
+    </div>
+
+    <div class="w-full px-4 sm:px-6 py-5 bg-slate-50 space-y-4 text-[clamp(1rem,2vw,1.3rem)] leading-relaxed">
+      <ul class="list-disc pl-5 space-y-4">
+        <li><strong>OPA Account Number:</strong> Must be nine digits, no dashes or spaces (e.g. 001222234).</li>
+        <li>
+          <strong>Building Identification Number (BIN):</strong> Found by clicking the building outline on the 
+          <a href="https://phl.maps.arcgis.com/apps/webappviewer/index.html?id=8eb3b947533d40a0952b226ddb4f28ef" target="_blank" class="inline-block text-blue-600 underline font-semibold hover:text-blue-800 transform transition-transform duration-200 hover:scale-105">Building ID Map</a>.
+        </li>
+        <li><strong>Suites or Unit Numbers:</strong> Identify a unit descriptor. Must include the Address field. Suite values are case-sensitive.</li>
+        <li><strong>Building Name:</strong> Coming Soon! Some buildings may have names.</li>
+      </ul>
+    </div>
+  </div>
+
+<div class="w-full border-b border-slate-200 shadow-lg mt-2">
+  <div class="w-full bg-blue-100 px-4 sm:px-6 py-4 font-semibold text-blue-900 text-[clamp(1.1rem,2.5vw,1.6rem)]">
+    Example Table
+  </div>
+
+  <div class="w-full px-4 sm:px-6 py-5 bg-slate-50 space-y-4 text-[clamp(1rem,2vw,1.3rem)] leading-relaxed overflow-x-auto">
+    <table class="min-w-full border border-slate-300 text-left text-[clamp(0.9rem,1.8vw,1.2rem)]">
+      <thead class="bg-blue-50">
+        <tr>
+          <th class="px-4 py-2 border-b border-slate-300">Column 1</th>
+          <th class="px-4 py-2 border-b border-slate-300">Column 2</th>
+          <th class="px-4 py-2 border-b border-slate-300">Column 3</th>
+          <th class="px-4 py-2 border-b border-slate-300">Column 4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="hover:bg-blue-50">
+          <td class="px-4 py-2 border-b border-slate-300">Row 1</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 1</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 1</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 1</td>
+        </tr>
+        <tr class="hover:bg-blue-50">
+          <td class="px-4 py-2 border-b border-slate-300">Row 2</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 2</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 2</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 2</td>
+        </tr>
+        <tr class="hover:bg-blue-50">
+          <td class="px-4 py-2 border-b border-slate-300">Row 3</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 3</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 3</td>
+          <td class="px-4 py-2 border-b border-slate-300">Row 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+
+<div class="text-center my-10 px-4 sm:px-6">
+  <button 
+    onclick="closePage()"
+    class="w-full sm:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg inset-ring-2 font-semibold 
+           text-[clamp(1rem,2.5vw,1.4rem)] shadow-md 
+           transform transition-transform duration-200 hover:scale-110 hover:bg-blue-700 active:scale-95"
+  >
+    Close
+  </button>
+</div>
+
+<script>
+function closePage() {
+  if (window.close) {
+    window.close();
+  } else {
+    alert("You can close this tab manually.");
+  }
+}
+
+
+const menuBtn = document.getElementById('menu-btn');
+const desktopBtn = document.getElementById('desktop-menu-btn');
+const sideMenu = document.getElementById('side-menu');
+const closeBtn = document.getElementById('close-menu');
+
+function openMenu() {
+  sideMenu.classList.remove('translate-x-full','opacity-0');
+  sideMenu.classList.add('translate-x-0','opacity-100');
+}
+
+function closeMenu() {
+  sideMenu.classList.remove('translate-x-0','opacity-100');
+  sideMenu.classList.add('translate-x-full','opacity-0');
+}
+
+
+menuBtn.addEventListener('click', openMenu);
+
+desktopBtn.addEventListener('click', openMenu);
+
+closeBtn.addEventListener('click', closeMenu);
+
+
+document.addEventListener('click', function(e) {
+  if(!sideMenu.contains(e.target) && !menuBtn.contains(e.target) && !desktopBtn.contains(e.target)) {
+    closeMenu();
+  }
+});
+</script>
+
+</body>
+</html>
+
